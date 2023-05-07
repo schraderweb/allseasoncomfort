@@ -150,3 +150,61 @@
 .icon-cancel:before {
   content: "\e918";
 }
+
+
+
+/* LSP FONT */
+
+@font-face {
+  font-family: 'lsp';
+  src:  url('fonts/lsp.eot?3d8wi6');
+  src:  url('fonts/lsp.eot?3d8wi6#iefix') format('embedded-opentype'),
+    url('fonts/lsp.ttf?3d8wi6') format('truetype'),
+    url('fonts/lsp.woff?3d8wi6') format('woff'),
+    url('fonts/lsp.svg?3d8wi6#lsp') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="lsp-icon-"], [class*=" lsp-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lsp' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lsp-icon-left-quotes-sign:before {
+  content: "\e908";
+}
+.lsp-icon-leaf:before {
+  content: "\e907";
+}
+.lsp-icon-clock:before {
+  content: "\e900";
+}
+.lsp-icon-technology:before {
+  content: "\e901";
+}
+.lsp-icon-note:before {
+  content: "\e902";
+}
+.lsp-icon-signs:before {
+  content: "\e903";
+}
+.lsp-icon-people:before {
+  content: "\e904";
+}
+.lsp-icon-people-1:before {
+  content: "\e905";
+}
+.lsp-icon-medal:before {
+  content: "\e906";
+}

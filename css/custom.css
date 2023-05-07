@@ -5315,6 +5315,13 @@ footer h3::after {
   gap: 15px;
 }
 
+.contact-infos i {
+  font-size: 24px;
+  color: #A8C41B;
+}
+
+
+
 .footer-bottom {
   background: #222222;
   color: #e0d4ca;
