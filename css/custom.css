@@ -480,7 +480,7 @@ form label.error {
 }
 
 .container {
-  width: 1200px;
+  width: 1400px;
 }
 
 /* ====================== BROWSE COMPATABILITY ===================== */
@@ -639,7 +639,7 @@ body.layout2 {
 .cnt-info > span {
   display: block;
   color: #929292;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 
@@ -651,7 +651,7 @@ body.layout2 {
 .emg-sec > span {
   display: block;
   color: #929292;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 3px;
 }
 .emg-sec > h4 {
@@ -677,7 +677,7 @@ body.layout2 {
 .social_links li {
   display: inline-block;
 }
-.social_links li a {
+.social_links li.social-icon a {
   display: inline-block;
   width: 46px;
   height: 46px;
@@ -1330,7 +1330,7 @@ body.layout2 {
 
 
 .layout2 .block.service-block {
-  padding: 140px 0 138px;
+  padding: 50px 0;
 }
 /* ===================== CHOOSE SERVICES ====================== */
 
@@ -4835,7 +4835,7 @@ form label.error {
 .responsive_header_navigations nav ul li a {
   display: inline-block;
   color: #333333;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -5347,4 +5347,70 @@ footer h3::after {
 
 .footer-bottom a {
   color: #A8C41B;
+}
+
+
+
+/* NEW STYLES */
+
+header, .responsive-header {
+  background-color: #114F7A;
+}
+header *, .responsive-header * {
+  color: #fff !important;
+}
+.hd_is svg path {
+  fill: #FAD000;
+}
+header .logo img, .responsive-header .responsive_hd_logo img {
+  background-color: #fff !important;
+  border-radius: 20px !important;
+}
+
+.responsive_hd_logo {
+  margin-bottom: 21px;
+}
+
+.top_header > .container > .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsive-header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.responsive-header > .container::before,
+.responsive-header > .container::after {
+  content: none;
+}
+
+.responsive-header > .container > .clearfix{
+  display: none;
+}
+
+#cta-btn > a.apt_form_btn {
+  padding: 15px 20px;
+  background: #fc5635;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#cta-btn > a.apt_form_btn:hover {
+  background: #e44a2b;
+}
+
+
+img.faq-img {
+  border-radius: 30px;
+}
+
+
+footer img {
+  background-color: #fff;
+  border-radius: 20px;
 }
