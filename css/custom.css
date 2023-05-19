@@ -645,8 +645,10 @@ body.layout2 {
 
 
 .emg-sec {
-  float: left;
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .emg-sec > span {
   display: block;
@@ -677,7 +679,7 @@ body.layout2 {
 .social_links li {
   display: inline-block;
 }
-.social_links li.social-icon a {
+.social-icon a {
   display: inline-block;
   width: 46px;
   height: 46px;
@@ -695,7 +697,8 @@ body.layout2 {
 
 
 .top_header {
-  padding: 41px 0 26px;
+  /* padding: 41px 0 26px; */
+  padding: 20px;
   position: relative;
 }
 ./*appointment_btn {
@@ -772,7 +775,27 @@ body.layout2 {
 
 .top_header .logo {
   margin-top: -6px;
-  text-align: center;
+}
+.top_header .logo img{
+  /* width: ; */
+  height: 100px;
+}
+.vertical-line {
+  position: relative;
+  width: 1px;
+  height: 100px; /* Adjust the height as needed */
+  background-color: black; /* Adjust the color as needed */
+}
+
+.vertical-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: white; /* Adjust the color as needed */
 }
 .hd_opts {
   padding: 0;
@@ -4885,6 +4908,74 @@ form label.error {
   opacity: 1;
   visibility: visible;
 }
+
+.responsive_header_navigations1 {
+  float: left;
+}
+.responsive_header_navigations1 nav {
+  display: block;
+}
+.responsive_header_navigations1 nav ul {
+  margin: 0;
+}
+.responsive_header_navigations1 nav ul li {
+  display: inline-block;
+  position: relative;
+  padding: 32px 18px 31px;
+}
+.responsive_header_navigations1 nav ul li a {
+  display: inline-block;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.responsive_header_navigations1 nav ul li a.active {
+  color: #df6160;
+}
+.responsive_header_navigations1 nav ul li:last-child {
+  margin-right: 0;
+}
+.responsive_header_navigations1 nav ul li a:before {
+  content: '\f107';
+  font-family: fontawesome;
+  position: absolute;
+  top: 0;
+  right: -16px;
+  color: #333333;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+.responsive_header_navigations1 nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 210px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.10);
+  z-index: 99;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-30px);
+  transition: all 0.4s ease-in-out;
+}
+.responsive_header_navigations1 nav ul ul li {
+  padding: 10px 20px;
+}
+.responsive_header_navigations1 nav ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.responsive_header_navigations1 nav ul li.has-menu > a:before {
+  opacity: 1;
+  visibility: visible;
+}
 .responsive-header .menu_btn {
   display: inline-block;
   margin-top: 7px;
@@ -5374,7 +5465,7 @@ header .logo img, .responsive-header .responsive_hd_logo img {
 .top_header > .container > .row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .responsive-header > .container {
