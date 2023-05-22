@@ -724,18 +724,20 @@ body.layout2 {
   align-items: center;
 }
 
-.emg-sec>span {
+/* .emg-sec>span {
   display: block;
   color: #929292;
   font-size: 18px;
   margin-bottom: 3px;
-}
+} */
 
-.emg-sec>h4 {
+.emg-sec h4 {
   display: block;
   color: #333333;
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 0;
+
 }
 
 .emg-sec>h4 i {
@@ -780,8 +782,6 @@ body.layout2 {
   padding: 20px;
   position: relative;
 }
-
-.
 
 /*appointment_btn {
   display: inline-block;
