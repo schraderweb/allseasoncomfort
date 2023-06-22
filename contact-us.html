@@ -266,11 +266,12 @@
                 </ul>
               </div>
               <div class="col-lg-6 col-md-6">
-                <form action="https://formsubmit.co/ascsolutions23@gmail.com"  method="POST" class="contFrm">
+                <form id="contact-form"  method="POST" class="contFrm">
                   <div class="row">
                     <div class="col-sm-6">
                       <input
                         type="text"
+                        id="name"
                         name="name"
                         placeholder="Your Name"
                         class="inptFld"
@@ -281,6 +282,7 @@
                     <div class="col-sm-6">
                       <input
                         type="email"
+                        id="email"
                         name="email"
                         placeholder="Email Address"
                         class="inptFld"
@@ -291,6 +293,7 @@
                     <div class="col-sm-6">
                       <input
                         type="tel"
+                        id="phone"
                         name="phone"
                         placeholder="Phone Number"
                         class="inptFld"
@@ -301,6 +304,7 @@
                     <div class="col-sm-6">
                       <input
                         type="text"
+                        id="subject"
                         name="subject"
                         placeholder="Subject"
                         class="inptFld"
@@ -313,24 +317,15 @@
                         class="inptFld"
                         rows=""
                         cols=""
+                        id="message"
                         name="message"
                         placeholder="Your Message..."
                         required
                       ></textarea>
-                    </div>
-                    <input type="text" name="_honey" style="display: none" />
-                    <input type="hidden" name="_template" value="table" />
- 
+                    </div> 
                    
                     <div class="col-12">
-                      <button type="submit" name="submit" class="inptBtn">SUBMIT</button>
-                      <input
-                      type="hidden"
-                      name="_subject"
-                      value="Contact Response from Perfect Shore Site!"
-                    />
-                      <input type="hidden" name="_next" value="https://allseasoncomfort.vercel.app/thanks.html" />
-
+                      <button type="submit" id="submit" name="submit" class="inptBtn">SUBMIT</button>
                     </div>
                   </div>
                 </form>
@@ -1370,5 +1365,29 @@
     <script src="js/plugins/custom-tabs.js"></script>
     <script src="js/forms.js"></script>
     <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      
+    $('#contact-form').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+    
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_7jjk9j4');
+    formData.append('template_id', 'template_in688g9');
+    formData.append('user_id', 'whKDP8b3dGjg3cNRX');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        window.location.href="thanks.html";
+    }).fail(function(error) {
+        alert('Oops... ' + JSON.stringify(error));
+    });
+});
+     
+    </script>
   </body>
 </html>
